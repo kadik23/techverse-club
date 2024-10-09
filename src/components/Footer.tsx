@@ -64,7 +64,7 @@ function Footer() {
           <div className=" flex flex-col gap-2  text-sm">
             <div className="flex flex-col ">
               <div className="font-semibold">Email :</div>
-              <div className="font-semibold text-white/75">???@???.com</div>
+              <div className="font-semibold text-white/75">techverse@gmail.com</div>
             </div>
             <div className="flex flex-col ">
               <div className="font-semibold">Address :</div>
