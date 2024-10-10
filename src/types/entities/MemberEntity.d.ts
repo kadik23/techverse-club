@@ -9,11 +9,11 @@ type MemberImage =
 
 interface MemberEntityBase {
   name: string;
-  departement: Departement | null;
   image: MemberImage;
 }
 
 interface Leader extends MemberEntityBase {
+  departement: Departement | null;
   isLeader: true;
   isFounder?: false;
   isPresident?: false;

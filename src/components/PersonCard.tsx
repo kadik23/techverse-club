@@ -22,7 +22,7 @@ function PersonCard(person: MemberEntity | SpeakerEntity) {
   if((person as MemberEntity).isFounder){
     description = 'Club Founder'
   }else if ((person as MemberEntity).isLeader) {
-    description = `${(person as MemberEntity).departement?.name} Lead`
+    description = `${(person as Leader).departement?.name} Lead`
   }else if ((person as MemberEntity).isPresident) {
     description = 'Club President'
   }
@@ -32,7 +32,7 @@ function PersonCard(person: MemberEntity | SpeakerEntity) {
         name={person.name}
         {...(description && { description })}
         cta="Learn more"
-        href="#Member"
+        href={(person as MemberEntity).isLeader ? `/department-overview/${(person as Leader).departement?.name}` : undefined}
         background={background}
         className="bg-transparent border-none shadow-none p-2"
         isActive={!!description && description !== 'Club Founder' && description !== 'Club President'}

@@ -4,4 +4,5 @@ type MemberImage =
 
 interface SpeakerEntity extends MemberImage {
     name: string;
+    isSpeaker: true
 }
