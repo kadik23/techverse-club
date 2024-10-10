@@ -40,11 +40,12 @@ export const members: MemberEntity[] = [
     {
         name: "Akram",
         departement: marketingDepartment,
-        isLeader: false,
         isFounder: true,
-        isPresident: false,
-        isMember: false
-    }
+        image: {
+          isImage: false,
+          nameShortCut: "AK",
+        },
+    },
 ]
 
 export const club_informations = {
