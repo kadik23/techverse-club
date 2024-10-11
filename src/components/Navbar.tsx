@@ -74,7 +74,9 @@ function Navbar() {
       }`}
     >
       <div className="flex justify-between items-center py-4 w-full">
-        <img className="w-32 h-10" src={logo} alt="" />
+        <NavLink to={'/'}>
+          <img className="w-32 h-10" src={logo} alt="" />
+        </NavLink>
         <div className="lg:flex items-center gap-4 text-lg hidden">
           {Links.map((link) => (
             <div

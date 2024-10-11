@@ -16,7 +16,12 @@ function Welcome() {
       </Button>
       <PersonCard
         name="kadik salah eddine"
-        isPresident={true}
+        departement={{
+          name:"IT",
+          description:"it..."
+          }
+        }
+        isLeader={true}
         image={{
           nameShortCut: "SK",
         }}

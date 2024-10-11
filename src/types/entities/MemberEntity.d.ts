@@ -4,7 +4,7 @@ interface Departement {
 }
 
 type MemberImage = 
-  | { isImage: true; image: string }
+  | { isImage: true; image_url: string }
   | { isImage?: false; nameShortCut: string };
 
 interface MemberEntityBase {
@@ -35,10 +35,12 @@ interface President extends MemberEntityBase {
 }
 
 interface Member extends MemberEntityBase {
+  departement: Departement | null;
   isLeader?: false;
   isFounder?: false;
   isPresident?: false;
   isMember: true;
+  image: { isImage?: false; nameShortCut: string }
 }
 
 type MemberEntity = Leader | Founder | President | Member;

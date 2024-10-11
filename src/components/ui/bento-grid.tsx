@@ -29,7 +29,8 @@ const BentoCard = ({
   description,
   href,
   cta,
-  isActive
+  isActive,
+  textSize
 }: {
   name: string;
   className?: string;
@@ -38,6 +39,7 @@ const BentoCard = ({
   href: string | undefined;
   cta: string;
   isActive?: boolean
+  textSize: string
 }) => (
   <div
     key={name}
@@ -50,14 +52,14 @@ const BentoCard = ({
   >
     <div>{background}</div>
     <div className={`pointer-events-none z-10 flex transform-gpu flex-col items-center gap-1 py-1 px-2 transition-all duration-300 ${isActive?'group-hover:-translate-y-10':''}`}>
-      <div className="font-geist font-semibold text-sm lg:text-lg">
+      <div className={`font-geist font-semibold ${textSize} text-center w-full`}>
         {name}
       </div>
-      <div className="font-geist font-normal text-base lg:text-lg">{description}</div>
+      <div className={`font-geist font-normal ${textSize}`}>{description}</div>
     </div>
     {isActive && (<div
       className={cn(
-        "pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row justify-center items-center opacity-0 transition-all duration-300 group-focus:translate-y-0 group-focus:opacity-100  lg:group-hover:translate-y-0 lg:group-hover:opacity-100",
+        "pointer-events-none mb-2 absolute right-0 bottom-0 flex w-full translate-y-10 transform-gpu flex-row justify-center items-center opacity-0 transition-all duration-300 group-focus:translate-y-0 group-focus:opacity-100  lg:group-hover:translate-y-0 lg:group-hover:opacity-100",
       )}
     >
       <Button variant="ghost" asChild size="sm" className="pointer-events-auto">
