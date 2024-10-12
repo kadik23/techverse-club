@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      rotate: {
+        '135': '135deg',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -30,6 +33,8 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'bounce-once': 'bounce 1s ease-in-out 10  ', 
+        'fade-in': 'fadeIn 1s ease-in-out forwards', 
       },
       colors: {
         primary: '#26215A',

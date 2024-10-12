@@ -23,7 +23,7 @@ function PersonCard(person: MemberEntity | SpeakerEntity) {
 
   let containerSizeClass = "";
   if ((person as SpeakerEntity).isSpeaker) {
-    containerSizeClass = "w-20 lg:w-28 h-28 lg:h-32"; // medium size for speakers
+    containerSizeClass = "w-20 lg:w-40 h-28 lg:h-full justify-start py-0"; // medium size for speakers
   } else if ((person as MemberEntity).isMember) {
     containerSizeClass = "lg:w-32"; // small size for regular members
   } else {

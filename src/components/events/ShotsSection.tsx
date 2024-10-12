@@ -1,103 +1,197 @@
 import Shot1 from "../../assets/images/Events/101-bootcamp/jeo.webp";
+import Shot2 from "../../assets/images/Events/101-bootcamp/20240225_154126.jpg";
+import Shot3 from "../../assets/images/Events/101-bootcamp/_MG_0277.jpg";
+import Shot4 from "../../assets/images/Events/101-bootcamp/_MG_0308.jpg";
+import Shot5 from "../../assets/images/Events/101-bootcamp/IMG_0310.jpg";
+import Shot6 from "../../assets/images/Events/101-bootcamp/AGC_20240225_152344013.jpg";
 import RoundedLogo from "../../assets/images/rounded-logo.png";
-import Raduis from "../../assets/images/Events/raduis.png";
-import Raduis1 from "../../assets/images/Events/raduis 1.png";
-import Raduis2 from "../../assets/images/Events/raduis 2.png";
-import Raduis3 from "../../assets/images/Events/raduis 3.png";
-import { useState } from "react";
+
+import { useRef, useState } from "react";
+import { AnimatedBeam } from "../ui/animated-beam";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalTrigger,
+} from "../ui/animated-modal";
 
 const ShotsSection = () => {
   const [imgSrc, setImgSrc] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const div1Ref = useRef<HTMLImageElement>(null);
+  const div2Ref = useRef<HTMLImageElement>(null);
+  const div3Ref = useRef<HTMLImageElement>(null);
+  const div4Ref = useRef<HTMLImageElement>(null);
+  const div5Ref = useRef<HTMLImageElement>(null);
+  const div6Ref = useRef<HTMLImageElement>(null);
+  const div7Ref = useRef<HTMLImageElement>(null);
   return (
-    <div className="w-full flex lg:flex-row lg:gap-0 gap-2 flex-col md:h-[900px] lg:h-[1100px]">
-      <div className="flex lg:flex-col md:flex-row flex-col items-center justify-between md:gap-0 gap-5 lg:w-[25%] w-full">
-        {Array.from({ length: 3 }).map((_, index) => {
-          return (
-            <div className="flex flex-col items-center gap-3">
-              <img
-                key={index}
-                src={Shot1}
-                alt="shot1"
-                className="object-cover rounded-[10px] shadow-md lg:h-[250px] lg:w-[260px] md:h-[175px] md:w-[190px]"
-                onClick={() => {
-                  setImgSrc(Shot1);
-                }}
-              />
-              {index + 1 !== 3 && (
-                <div className="border-dashed border-[2px] border-white w-1 h-[150px] md:hidden" />
-              )}
-            </div>
-          );
-        })}
-      </div>
-      <div className=" flex-col items-center justify-center flex-grow lg:flex hidden">
-        <div className="flex  items-stretch relative top-12 w-full">
-          <img
-            src={Raduis1}
-            alt="shape"
-            className="lg:scale-[0.85] scale-75 lg:w-[50%] w-[40%] relative right-8"
-          />
-          <img
-            src={Raduis}
-            alt="shape"
-            className="lg:scale-[0.85] scale-75 lg:w-[50%] w-[40%] relative left-8"
-          />
+    <div className="w-full flex lg:flex-row lg:gap-0 gap-2 flex-col md:h-[1000px] ">
+      <div
+        className="relative flex w-full items-center justify-center rounded-lg"
+        ref={containerRef}
+      >
+        <div className="flex size-full flex-col max-w-[55rem] items-stretch justify-between gap-32">
+          <div className="flex flex-row items-center justify-between z-10">
+            <Modal>
+              <ModalTrigger className="flex justify-center group/modal-btn">
+                <img
+                  ref={div5Ref}
+                  alt=""
+                  src={Shot1}
+                  className="w-52 h-52 rounded-md"
+                />
+              </ModalTrigger>
+              <ModalBody className="bg-transparent">
+                <ModalContent>
+                  <img
+                    src={Shot1}
+                    className="max-h-[80vh] sm:max-w-[90vw] max-w-[80vw] rounded-lg shadow-lg"
+                  />
+                </ModalContent>
+              </ModalBody>
+            </Modal>
+            <Modal>
+              <ModalTrigger className="flex justify-center group/modal-btn">
+                <img
+                  ref={div1Ref}
+                  alt=""
+                  src={Shot2}
+                  className="w-52 h-52 rounded-md"
+                />
+              </ModalTrigger>
+              <ModalBody className="bg-transparent">
+                <ModalContent>
+                  <img
+                    src={Shot2}
+                    className="max-h-[80vh] sm:max-w-[90vw] max-w-[80vw] rounded-lg shadow-lg"
+                  />
+                </ModalContent>
+              </ModalBody>
+            </Modal>
+          </div>
+          <div className="flex flex-row items-center justify-between z-10">
+            <Modal>
+              <ModalTrigger className="flex justify-center group/modal-btn">
+                <img
+                  ref={div2Ref}
+                  alt=""
+                  src={Shot3}
+                  className="w-52 h-52 rounded-md"
+                />
+              </ModalTrigger>
+              <ModalBody className="bg-transparent">
+                <ModalContent>
+                  <img
+                    src={Shot3}
+                    className="max-h-[80vh] sm:max-w-[90vw] max-w-[80vw] rounded-lg shadow-lg"
+                  />
+                </ModalContent>
+              </ModalBody>
+            </Modal>
+
+            <img ref={div4Ref} alt="" src={RoundedLogo} className="w-24" />
+            <Modal>
+              <ModalTrigger className="flex justify-center group/modal-btn">
+                <img
+                  ref={div6Ref}
+                  alt=""
+                  src={Shot4}
+                  className="w-52 h-52 rounded-md"
+                />
+              </ModalTrigger>
+              <ModalBody className="bg-transparent">
+                <ModalContent>
+                  <img
+                    src={Shot4}
+                    className="max-h-[80vh] sm:max-w-[90vw] max-w-[80vw] rounded-lg shadow-lg"
+                  />
+                </ModalContent>
+              </ModalBody>
+            </Modal>
+          </div>
+          <div className="flex flex-row items-center justify-between z-10">
+            <Modal>
+              <ModalTrigger className="flex justify-center group/modal-btn">
+                <img
+                  ref={div3Ref}
+                  alt=""
+                  src={Shot5}
+                  className="w-52 h-52 rounded-md"
+                />
+              </ModalTrigger>
+              <ModalBody className="bg-transparent">
+                <ModalContent>
+                  <img
+                    src={Shot5}
+                    className="max-h-[80vh] sm:max-w-[90vw] max-w-[80vw] rounded-lg shadow-lg"
+                  />
+                </ModalContent>
+              </ModalBody>
+            </Modal>
+
+            <Modal>
+              <ModalTrigger className="flex justify-center group/modal-btn">
+                <img
+                  ref={div7Ref}
+                  alt=""
+                  src={Shot6}
+                  className="w-52 h-52 rounded-md"
+                />
+              </ModalTrigger>
+              <ModalBody className="bg-transparent">
+                <ModalContent>
+                  <img
+                    src={Shot6}
+                    className="max-h-[80vh] sm:max-w-[90vw] max-w-[80vw] rounded-lg shadow-lg"
+                  />
+                </ModalContent>
+              </ModalBody>
+            </Modal>
+          </div>
         </div>
-        <div className="flex items-center lg:flex-row flex-col w-full gap-3">
-          <div className="flex-grow border-[2px] border-dashed border-white" />
-          <img
-            src={RoundedLogo}
-            alt="rounded logo"
-            className="shadow-md shadow-slate-200 rounded-full"
-          />
-          <div className="flex-grow border-[2px] border-dashed border-white h-1 w-1" />
-        </div>
-        <div className="flex justify-between items-stretch relative bottom-12 w-full">
-          <img
-            src={Raduis2}
-            alt="shape"
-            className="lg:scale-[0.85] scale-75 lg:w-[50%] w-[40%] relative right-8"
-          />
-          <img
-            src={Raduis3}
-            alt="shape"
-            className="lg:scale-[0.85] scale-75 lg:w-[50%] w-[40%] relative left-8"
-          />
-        </div>
-      </div>
-      <div className=" w-full justify-center flex-grow lg:hidden md:flex hidden">
-        <div className="flex flex-col items-center">
-          <img src={Raduis1} alt="curve line" className="scale-90" />
-          <img src={Raduis2} alt="curve line" className="scale-90" />
-        </div>
-        <div className="h-full flex flex-col items-center gap-2">
-          <div className="w-1 flex-grow border-dashed border-[2px] border-white" />
-          <img
-            src={RoundedLogo}
-            alt="rounded-logo"
-            className="rounded-full shadow-md shadow-slate-200"
-          />
-          <div className="w-1 flex-grow border-dashed border-[2px] border-white" />
-        </div>
-        <div className="flex flex-col">
-          <img src={Raduis} alt="curve line" className="scale-90" />
-          <img src={Raduis3} alt="curve line" className="scale-90" />
-        </div>
-      </div>
-      <div className="hidden md:flex lg:flex-col items-center justify-between lg:w-[25%] w-full">
-        {Array.from({ length: 3 }).map((_, index) => {
-          return (
-            <img
-              key={index}
-              src={Shot1}
-              alt="shot1"
-              className="object-cover rounded-[10px] shadow-md lg:h-[250px] lg:w-[260px] h-[175px] w-[190px]"
-              onClick={() => {
-                setImgSrc(Shot1);
-              }}
-            />
-          );
-        })}
+
+        <AnimatedBeam
+          containerRef={containerRef}
+          fromRef={div1Ref}
+          toRef={div4Ref}
+          curvature={-0}
+          endYOffset={10}
+        />
+        <AnimatedBeam
+          containerRef={containerRef}
+          fromRef={div2Ref}
+          toRef={div4Ref}
+        />
+        <AnimatedBeam
+          containerRef={containerRef}
+          fromRef={div3Ref}
+          toRef={div4Ref}
+          curvature={0}
+          endYOffset={10}
+        />
+        <AnimatedBeam
+          containerRef={containerRef}
+          fromRef={div5Ref}
+          toRef={div4Ref}
+          curvature={0}
+          endYOffset={10}
+          reverse
+        />
+        <AnimatedBeam
+          containerRef={containerRef}
+          fromRef={div6Ref}
+          toRef={div4Ref}
+          reverse
+        />
+        <AnimatedBeam
+          containerRef={containerRef}
+          fromRef={div7Ref}
+          toRef={div4Ref}
+          curvature={0}
+          endYOffset={10}
+          reverse
+        />
       </div>
 
       {/* Image Modal Dialog */}
