@@ -423,3 +423,7 @@ export const partners = [
     image: "im.png",
   },
 ];
+
+
+
+
