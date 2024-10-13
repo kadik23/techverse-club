@@ -9,3 +9,7 @@
 *{
   color: white ;
 }
+
+shadow-logo {
+  box-shadow: 0 10px 15px -3px rgba(255, 255, 255);
+}

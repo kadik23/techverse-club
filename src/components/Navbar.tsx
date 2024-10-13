@@ -69,7 +69,7 @@ function Navbar() {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-8 ${
+      className={`fixed top-0 left-0 w-full z-20 transition-all duration-300 px-8 ${
         isScrolled ? "bg-white/10 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
